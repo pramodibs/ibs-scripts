@@ -9,18 +9,12 @@ sudo apt-get install wget ca-certificates
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
 sudo apt-get update
-sudo apt-get install postgresql postgresql-contrib -y
-sudo bash 
-echo "########### Set password for postgress user:"
-sudo -u postgres psql
-ALTER USER postgres PASSWORD 'welcome@123';
-\q
+sudo apt-get install postgresql postgresql-contrib php-pgsql phppgadmin -y
+sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'welcome@123';"
 #CREATE ROLE username WITH LOGIN CREATEDB ENCRYPTED PASSWORD 'password';
-sudo apt-get install php-pgsql phppgadmin -y
 #echo '$conf['extra_login_security'] = false;' >> /etc/phppgadmin/config.inc.php
 sudo sed -i '93 s/^/#/' /etc/phppgadmin/config.inc.php
 sudo sed -i '11 s/^/#/' /etc/apache2/conf-enabled/phppgadmin.conf
 sudo service apache2 restart
 sudo service postgresql restart
-
-
+echo"### postgress and phpPgAdmin has been sucessfully install. please use url http://localhost<ip>/phppgadmin to login "
