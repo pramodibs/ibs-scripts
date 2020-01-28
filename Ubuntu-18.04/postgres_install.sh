@@ -17,4 +17,4 @@ sudo sed -i '93 s/^/#/' /etc/phppgadmin/config.inc.php
 sudo sed -i '11 s/^/#/' /etc/apache2/conf-enabled/phppgadmin.conf
 sudo service apache2 restart
 sudo service postgresql restart
-echo "### postgress and phpPgAdmin has been sucessfully install. please use url http://localhost<ip>/phppgadmin to login "
+echo "###postgress and phpPgAdmin has been sucessfully install. url http://localhost/phppgadmin"
