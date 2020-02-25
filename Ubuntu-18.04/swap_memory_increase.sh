@@ -9,7 +9,7 @@ sudo swapoff -a
 sudo fallocate -l 16G /swap
 sudo mkswap /swap
 sudo swapon /swap
-#to varify run sudo swapon --show and free -h or swapon -s
+#to varify run sudo swapon --show and free -h or swapon -s or grep SwapTotal /proc/meminfo
 #make an entry in fstab file for permanent mount while restart the system
 #before making any changes please make a backup file
 sudo cp /etc/fstab /etc/fstab.bak
