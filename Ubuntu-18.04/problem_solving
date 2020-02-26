@@ -1,19 +1,26 @@
-We can use hdparm command to find the details of HDD like storage, RPM etc. we can filter it by "Nominal Media Rotation Rate"
-sudo hdparm -I /dev/sda | grep "Nominal Media Rotation Rate"
-
+#Step 1:
+lsblk
+df -h
 for processor model
 sudo dmidecode |grep Version
 
-for ram and swap usage
-free -h
+#Step 2:
+We can use hdparm command to find the details of HDD like storage, RPM etc. we can filter it by "Nominal Media Rotation Rate"
+sudo hdparm -I /dev/sda | grep "Nominal Media Rotation Rate"
 
-for CPU usage 
-top
-
+#Step 3:
 for ram type
 sudo dmidecode |grep "Form Factor"
 
+#Step 4:
+for CPU usage
+top
 
-for ram size
+#Step 5:
+for swap and ram usage
+free -h
+
+#Step 6:
+for indiduval ram size
 sudo dmidecode |grep "Size"
 
