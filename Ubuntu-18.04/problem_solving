@@ -1,5 +1,3 @@
-
-
 #Step 1:
 lsblk
 df -h
@@ -13,6 +11,8 @@ sudo hdparm -I /dev/sda | grep "Nominal Media Rotation Rate"
 #Step 3:
 for ram type
 sudo dmidecode |grep "Form Factor"
+sudo dmidecode |grep Type
+
 
 #Step 4:
 for CPU usage
@@ -25,4 +25,11 @@ free -h
 #Step 6:
 for indiduval ram size
 sudo dmidecode |grep "Size"
+
+for sql connection check on remote machine
+mysql -h 172.20.15.108 -u root -p
+
+
+for citrix receiver:
+https://downloads.citrix.com/14822/icaclient_13.10.0.20_amd64.deb?__gda__=1583253623_5e367d8382d61e87b43344f24b9a25c0
 
