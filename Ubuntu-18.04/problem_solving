@@ -33,3 +33,11 @@ mysql -h 172.20.15.108 -u root -p
 for citrix receiver:
 https://downloads.citrix.com/14822/icaclient_13.10.0.20_amd64.deb?__gda__=1583253623_5e367d8382d61e87b43344f24b9a25c0
 
+#Start pm2 service on mongo DB Server
+Please follow the steps below after restarting the server:-
+1.  cd /var/www/html/aramark-opc/
+2. sudo pm2 start index.js
+
+Above 2 points will start the pm2 service on "http://172.20.20.11:3033/", which mapped to " http://api.impressicocrm.com/ ".
+"Routing/mapping" already managed by IT team and "Node" set up done by Devops team"
+
