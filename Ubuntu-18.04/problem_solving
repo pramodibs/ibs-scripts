@@ -41,3 +41,14 @@ Please follow the steps below after restarting the server:-
 Above 2 points will start the pm2 service on "http://172.20.20.11:3033/", which mapped to " http://api.impressicocrm.com/ ".
 "Routing/mapping" already managed by IT team and "Node" set up done by Devops team"
 
+
+#Conversion of crt+Key =pfx and Password for IIS
+We have found a solution for importing SSL certificate in IIS. 
+Please following below steps to convert cer + private key to pfx
+
+ openssl pkcs12 -export -out domain.name.pfx -inkey domain.name.key -in domain.name.crt
+
+
+
+Note-: domain.name should be your file name.
+
