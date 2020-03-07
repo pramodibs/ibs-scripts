@@ -1,0 +1,8 @@
+client side check
+rsop.msc - for windows update source and policy update
+reg query hklm\software\policies\microsoft\windows\windowsupdate
+Get-WindowsUpdateLog
+gpupdate.exe /force
+nslookup im-desk-138 (WSUS Server IP/Name)
+
+
