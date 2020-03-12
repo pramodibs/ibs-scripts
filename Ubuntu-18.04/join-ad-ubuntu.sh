@@ -7,6 +7,9 @@
 sudo sed -i '12 s/^/#/' /etc/nsswitch.conf
 sudo echo "hosts:       "files " "dns"  ""mdns4" >> /etc/nsswitch.conf
 service networking restart
+echo "172.20.20.12	git.impressicocrm.com" >> /etc/hosts
+echo "172.20.20.5	mail.impressico.local" >> /etc/hosts
+echo "nameserver 172.20.20.5" >>  /run/systemd/resolve/stub-resolv.conf
 wget http://git.impressicocrm.com/vinod.kumar/Software/raw/master/centrify-suite-2017.3-deb7-x86_64.tgz -O /tmp/centrify-suite-2017.3-deb7-x86_64.tgz
 mkdir /tmp/centrify && cd /tmp/centrify
 tar -zvxf /tmp/centrify-suite-2017.3-deb7-x86_64.tgz -C /tmp/centrify
