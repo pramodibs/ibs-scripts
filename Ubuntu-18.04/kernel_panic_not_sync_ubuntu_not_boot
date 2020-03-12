@@ -1,9 +1,0 @@
-issue: Kernel Panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)
-solution: reboot and select advanced mode --> old kernel image --> recovery mode --
-select grub to repair and reboot
-
-or we can do this by grub 
-sudo update-initramfs -u -k version to generate the initrd for version (replace version with the kernel version string such as 4.15.0-36-generic) then sudo update-grub.
-
-or
-dpkg --configure -a
